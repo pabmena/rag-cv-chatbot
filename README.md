@@ -1,4 +1,4 @@
-# Chatbot RAG para consultar el CV del alumno (Streamlit)
+# Chatbot RAG para consultar el CV/alumno (Streamlit)
 
 Sistema de **Retrieval-Augmented Generation (RAG)** que permite consultar un CV y obtener respuestas con citas de las secciones relevantes.
 Listo para ejecutar localmente con **Streamlit + FAISS + Sentence-Transformers** y generación vía **Ollama** (local) u **OpenAI**/ **Claude** (SaaS).
@@ -28,7 +28,7 @@ pip install -r requirements.txt
 #    Opción C - OpenAI:
 #      - Copiar .env.example a .env y setear OPENAI_API_KEY=<tu_api_key>
 
-# 4) Colocar tu CV en /data como PDF/TXT/MD (ej: cv_alumno.pdf).
+# 4) Colocar CV en /data como PDF/TXT/MD (ej: cv_alumno.pdf).
 #    También podés subirlo desde la UI.
 python ingest.py  # crea/actualiza el índice
 
@@ -36,7 +36,7 @@ python ingest.py  # crea/actualiza el índice
 streamlit run app.py
 ```
 
-Abre el navegador en la URL que te imprime Streamlit (usualmente `http://localhost:8501`).
+Abrir el navegador en la URL que imprime Streamlit (usualmente `http://localhost:8501`).
 
 ---
 
@@ -54,7 +54,6 @@ rag_cv_chatbot/
 │  └─ CV_ejemplo.md
 ├─ storage/              # Se crea al ejecutar ingest.py (índice y metadatos)
 └─ docs/
-   └─ demo_script.md     # Guion sugerido para tu video de presentación
 ```
 
 ## ✨ Características
@@ -76,8 +75,8 @@ rag_cv_chatbot/
 
 ## ⚙️ Configuración
 
-- Variables de entorno (en `.env` si usás OpenAI):
-  - `OPENAI_API_KEY`: clave para usar modelos de OpenAI.
+- Variables de entorno (en `.env`):
+  - `CLAUDE_API_KEY`: clave para usar modelos de Claude-code: `claude-3-7-sonnet-20250219`
   - `OPENAI_MODEL` (opcional): por defecto `gpt-4o-mini`.
   - `OLLAMA_MODEL` (opcional): p.ej. `llama3.1:8b` si usás Ollama local.
 
@@ -94,13 +93,6 @@ rag_cv_chatbot/
 - *"¿Qué habilidades técnicas tiene y en qué proyectos las aplicó?"*
 - *"¿Datos de contacto?"*
 
-## 🎥 Entregable del video (OBS)
-
-1. Muestra el repo y `README.md`.
-2. Ejecutá `python ingest.py` con tu **CV real** en `/data` o subilo desde la UI.
-3. Abrí `streamlit run app.py`, hacé 2–3 consultas y mostrá citas.
-4. Finalizá explicando brevemente la arquitectura RAG.
-
 ## 🧾 Licencia
 
-MIT. Podés reutilizar y modificar libremente citando este repo en tu TP.
+MIT. 
