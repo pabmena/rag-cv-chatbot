@@ -1,0 +1,16 @@
+# Entorno / cache
+.venv/
+__pycache__/
+*.pyc
+
+# Config y secretos
+.env
+
+# Datos e índices locales
+storage/
+data/*
+!data/README.md
+!data/.gitkeep
+
+# Sistema
+.DS_Store
