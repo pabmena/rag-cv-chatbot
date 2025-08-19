@@ -29,7 +29,7 @@ pip install -r requirements.txt
 #      - Copiar .env.example a .env y setear OPENAI_API_KEY=<tu_api_key>
 
 # 4) Colocar CV en /data como PDF/TXT/MD (ej: cv_alumno.pdf).
-#    También podés subirlo desde la UI.
+#    También se puede adjuntar/subirlo desde la UI.
 python ingest.py  # crea/actualiza el índice
 
 # 5) Lanzar la app
@@ -58,7 +58,7 @@ rag_cv_chatbot/
 
 ## ✨ Características
 
-- **Ingesta simple**: arrastrá tu CV (PDF/TXT/MD) o reemplazá el ejemplo y ejecutá `python ingest.py`.
+- **Ingesta simple**: arrastrá tu CV (PDF/TXT/MD) y ejecutá `python ingest.py`.
 - **Embeddings multilingües**: `paraphrase-multilingual-MiniLM-L12-v2` (soporta español).
 - **FAISS** como vector store en disco.
 - **RAG** con *top-k retrieval* y citas (fragmentos + archivo origen).
